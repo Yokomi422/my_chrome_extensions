@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    width: 300px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    margin-top: 0;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    background: #fff;
+    margin: 5px 0;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+li a {
+    text-decoration: none;
+    color: #007bff;
+    flex: 1;
+    padding-right: 10px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#saveArticle {
+    background-color: #28a745;
+    color: white;
+}
+
+#setReminder {
+    background-color: #ffc107;
+    color: black;
+}
+
+#clearArticles {
+    background-color: #dc3545;
+    color: white;
+}
+
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: red;
+}

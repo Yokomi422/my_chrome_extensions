@@ -1,0 +1,28 @@
+{
+  "name": "Read It Later Reminder",
+  "version": "1.0",
+  "manifest_version": 3,
+  "description": "A simple extension to remind you to read your saved articles",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "commands": {
+    "save-article": {
+      "suggested_key": {
+        "default": "Ctrl+P",
+        "mac": "Ctrl+P"
+      },
+      "description": "Save the current article to read later"
+    }
+  },
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["alarms", "storage", "notifications", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  }
+}

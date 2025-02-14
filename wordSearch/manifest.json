@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "wordSearch",
+  "version": "1.0",
+  "description": "word search in https://www.tentan.jp/, and mark the words you drag on the page",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_start",
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["<all_urls>"],
+  "permissions": ["commands", "tabs", "scripting"],
+  "commands": {
+    "searchOnWordBook": {
+      "suggested_key": {
+        "default": "Ctrl+W",
+        "mac": "MacCtrl+W"
+      },
+      "description": "search the word on word book"
+    }
+  }
+}
