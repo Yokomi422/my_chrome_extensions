@@ -12,20 +12,6 @@ chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   }
   return true;
 });
-chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  if (message.command === "fetchClipboard") {
-    navigator.clipboard
-      .readText()
-      .then((word) => {
-        sendResponse({ text: word });
-      })
-      .catch((err) => {
-        console.error("クリップボードの取得に失敗:", err);
-        sendResponse({ error: err });
-      });
-  }
-  return true;
-});
 
 document.addEventListener("mouseup", () => {
   const selectedText = window.getSelection().toString();
