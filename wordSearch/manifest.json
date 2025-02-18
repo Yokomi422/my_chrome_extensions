@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "wordSearch",
   "version": "1.0",
-  "description": "word search in https://www.tentan.jp/, and mark the words you drag on the page",
+  "description": "単語帳の情報を取得し、ドラッグでハイライト＆保存、Control+Wで検索結果を逐次表示する拡張機能",
   "background": {
     "service_worker": "background.js"
   },
@@ -14,14 +14,14 @@
     }
   ],
   "host_permissions": ["<all_urls>"],
-  "permissions": ["commands", "tabs", "scripting"],
+  "permissions": ["commands", "tabs", "scripting", "storage"],
   "commands": {
     "searchOnWordBook": {
       "suggested_key": {
         "default": "Ctrl+W",
         "mac": "MacCtrl+W"
       },
-      "description": "search the word on word book"
+      "description": "保存された単語を検索して結果を表示する"
     }
   }
 }
